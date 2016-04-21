@@ -47,7 +47,6 @@ class PortfolioController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function listAction()
     {
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings);
         $portfolios = $this->portfolioRepository->findAll();
         foreach ($portfolios as $portfolio) {
             $images = $this->portfolioRepository->getFileReferences($portfolio->getUid());

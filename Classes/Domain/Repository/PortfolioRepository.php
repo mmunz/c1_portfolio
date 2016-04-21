@@ -1,4 +1,5 @@
 <?php
+
 namespace C1\C1Portfolio\Domain\Repository;
 
 /* * *************************************************************
@@ -29,8 +30,12 @@ namespace C1\C1Portfolio\Domain\Repository;
 /**
  * The repository for Portfolios
  */
-class PortfolioRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
-{
+class PortfolioRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+
+    // Order by BE sorting
+    protected $defaultOrderings = array(
+        'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+    );
 
     /**
      * get file references
@@ -38,8 +43,7 @@ class PortfolioRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      * @param integer $record_id
      * @return TYPO3\CMS\Core\Resource\FileReference
      */
-    public function getFileReferences($record_id)
-    {
+    public function getFileReferences($record_id) {
         $fileRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Resource\\FileRepository');
         $fileObjects = $fileRepository->findByRelation('tx_c1portfolio_domain_model_portfolio', 'images', $record_id);
         return $fileObjects;
