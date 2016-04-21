@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-07T21:28:40Z" product-name="c1_portfolio">
+		<header/>
+		<body>
+			<trans-unit id="tx_c1portfolio_domain_model_portfolio">
+				<source>Portfolio</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_portfolio.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_portfolio.descshort">
+				<source>Descshort</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_portfolio.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_portfolio.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_portfolio.url">
+				<source>Url</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_portfolio.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_portfolio.featured">
+				<source>Featured</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_portfolio.customer">
+				<source>Customer</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_portfolio.tags">
+				<source>Tags</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_customer">
+				<source>Customer</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_customer.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_customer.url">
+				<source>Url</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_tag">
+				<source>Tag</source>
+			</trans-unit>
+			<trans-unit id="tx_c1portfolio_domain_model_tag.title">
+				<source>Title</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

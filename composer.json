@@ -1,0 +1,24 @@
+{
+    "name": "c1/c1-portfolio",
+    "type": "typo3-cms-extension",
+    "version": "0.0.1",
+    "description": "A portfolio for web sites.",
+    "keywords": [
+        "typo3",
+        "TYPO3 CMS"
+    ],
+    "homepage": "",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Manuel Munz",
+            "email": "t3dev@comuno.net",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "C1\\C1Portfolio\\": "Classes"
+        }
+    }
+}

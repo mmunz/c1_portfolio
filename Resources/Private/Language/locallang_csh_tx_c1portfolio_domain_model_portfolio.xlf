@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-07T21:28:40Z" product-name="c1_portfolio">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="descshort.description">
+				<source>descshort</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="date.description">
+				<source>date</source>
+			</trans-unit>
+			<trans-unit id="url.description">
+				<source>url</source>
+			</trans-unit>
+			<trans-unit id="images.description">
+				<source>images</source>
+			</trans-unit>
+			<trans-unit id="featured.description">
+				<source>featured</source>
+			</trans-unit>
+			<trans-unit id="customer.description">
+				<source>customer</source>
+			</trans-unit>
+			<trans-unit id="tags.description">
+				<source>tags</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,25 @@
+ <T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Function</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <maxItems>
+                        <TCEforms>
+                            <label>Max. items to show</label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <max>10</max>
+                                <eval>int</eval>
+                            </config>
+                        </TCEforms>
+                    </maxItems>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

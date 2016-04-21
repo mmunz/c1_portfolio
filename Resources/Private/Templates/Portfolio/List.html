@@ -1,0 +1,41 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+    <f:flashMessages />
+
+    <f:for each="{portfolios}" as="portfolio">
+        <article{f:if(condition:'{portfolio.featured}',then:' class="featured"')}>
+            <figure>
+                <f:media
+                    file="{portfolio.media.0}"
+                    width="400c"
+                    height="300c"
+                    alt="{f: if condition(portfolio.media.0.propertiesOfFileReference.alternative, then: portfolio.media.0.propertiesOfFileReference.alternative, else: portfolio.media.0.originalFile.name}"
+                    />
+                <figcaption>
+                    <p>{portfolio.date -> f:format.date(format:"Y")}</p>
+                    <h2><f:format.html>{portfolio.title}</f:format.html></h2>
+                    <f:format.html>{portfolio.descshort}</f:format.html>
+                    <f:link.action class="portfolio-more" action="show" arguments="{portfolio : portfolio}">mehr</f:link.action>
+                </figcaption>
+            </figure>
+            <f:comment>
+            <td><f:link.action action="show" arguments="{portfolio : portfolio}"> {portfolio.featured}</f:link.action></td>
+            </f:comment>
+        </article>
+    </f:for>
+
+
+</f:section>

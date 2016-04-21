@@ -1,0 +1,16 @@
+
+plugin.tx_c1portfolio_list {
+	view {
+		templateRootPaths.0 = {$plugin.tx_c1portfolio_list.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_c1portfolio_list.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_c1portfolio_list.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_c1portfolio_list.persistence.storagePid}
+	}
+    settings {
+        list {
+            maxItems = {$plugin.tx_c1portfolio_list.settings.list.maxItems}
+        }
+    }
+}
