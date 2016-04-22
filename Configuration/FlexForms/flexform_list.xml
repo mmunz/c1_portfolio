@@ -7,17 +7,30 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <maxItems>
+                    <settings.list.maxItems>
                         <TCEforms>
                             <label>Max. items to show</label>
                             <config>
                                 <type>input</type>
                                 <size>5</size>
-                                <max>10</max>
+                                <max>9999</max>
                                 <eval>int</eval>
                             </config>
                         </TCEforms>
-                    </maxItems>
+                    </settings.list.maxItems>
+                </el>
+                <el>
+                    <settings.list.detailPid>
+                        <TCEforms>
+                            <label>Show Details from this pageID</label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <max>9999</max>
+                                <eval>int</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.list.detailPid>
                 </el>
             </ROOT>
         </sDEF>

@@ -11,6 +11,7 @@ plugin.tx_c1portfolio_list {
     settings {
         list {
             maxItems = {$plugin.tx_c1portfolio_list.settings.list.maxItems}
+            detailPid = {$plugin.tx_c1portfolio_list.settings.list.detailPid}
         }
     }
     features {

@@ -1,7 +1,8 @@
 <?php
+
 namespace C1\C1Portfolio\Controller;
 
-/***************************************************************
+/* * *************************************************************
  *
  *  Copyright notice
  *
@@ -24,13 +25,12 @@ namespace C1\C1Portfolio\Controller;
  *  GNU General Public License for more details.
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
+ * ************************************************************* */
 
 /**
  * PortfolioController
  */
-class PortfolioController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
-{
+class PortfolioController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
     /**
      * portfolioRepository
@@ -39,30 +39,39 @@ class PortfolioController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * @inject
      */
     protected $portfolioRepository = NULL;
-    
+
     /**
      * action list
      *
      * @return void
      */
-    public function listAction()
-    {
-        $portfolios = $this->portfolioRepository->findAll();
+    public function listAction() {
+        $limit = intval($this->settings['list']['maxItems']);
+        if ($limit > 0) {
+            $portfolios = $this->portfolioRepository->findAllLimit($limit);
+        } else {
+            $portfolios = $this->portfolioRepository->findAll();
+        }
+
+        if (! intval($this->settings['list']['detailPid'] > 0)) {
+            $this->settings['list']['detailPid'] = $GLOBALS['TSFE']->id;
+        }
+        
         foreach ($portfolios as $portfolio) {
             $images = $this->portfolioRepository->getFileReferences($portfolio->getUid());
             $portfolio->setMedia($images);
         }
+        $this->view->assign('settings', $this->settings);
         $this->view->assign('portfolios', $portfolios);
     }
-    
+
     /**
      * action show
      *
      * @param \C1\C1Portfolio\Domain\Model\Portfolio $portfolio
      * @return void
      */
-    public function showAction(\C1\C1Portfolio\Domain\Model\Portfolio $portfolio)
-    {
+    public function showAction(\C1\C1Portfolio\Domain\Model\Portfolio $portfolio) {
         $this->view->assign('portfolio', $portfolio);
         $images = $this->portfolioRepository->getFileReferences($portfolio->getUid());
         $this->view->assign('images', $images);

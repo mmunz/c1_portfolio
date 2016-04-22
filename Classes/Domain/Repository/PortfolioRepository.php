@@ -31,6 +31,9 @@ namespace C1\C1Portfolio\Domain\Repository;
  * The repository for Portfolios
  */
 class PortfolioRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+    public function findAllLimit($limit=9999) {
+        return $this->createQuery()->setLimit($limit)->execute();
+    }
 
     // Order by BE sorting
     protected $defaultOrderings = array(
