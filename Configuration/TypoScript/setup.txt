@@ -13,4 +13,7 @@ plugin.tx_c1portfolio_list {
             maxItems = {$plugin.tx_c1portfolio_list.settings.list.maxItems}
         }
     }
+    features {
+		skipDefaultArguments = 1
+	}
 }
