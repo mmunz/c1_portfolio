@@ -46,6 +46,10 @@ class PortfolioController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * @return void
      */
     public function listAction() {
+        $args = $this->request->getArguments();
+        if (intval($args['portfolio']) > 0) {
+            $this->forward('show');
+        }
         $limit = intval($this->settings['list']['maxItems']);
         if ($limit > 0) {
             $portfolios = $this->portfolioRepository->findAllLimit($limit);
