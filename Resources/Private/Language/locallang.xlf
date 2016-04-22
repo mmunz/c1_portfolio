@@ -48,6 +48,12 @@
 			<trans-unit id="tx_c1portfolio_domain_model_tag.title">
 				<source>Title</source>
 			</trans-unit>
+            <trans-unit id="settings.detailPid">
+				<source>Detail Page</source>
+			</trans-unit>
+            <trans-unit id="settings.maxItems">
+				<source>Max. Items to show</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
