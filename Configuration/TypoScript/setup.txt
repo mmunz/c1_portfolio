@@ -13,6 +13,12 @@ plugin.tx_c1portfolio_list {
             maxItems = {$plugin.tx_c1portfolio_list.settings.list.maxItems}
             detailPid = {$plugin.tx_c1portfolio_list.settings.list.detailPid}
         }
+        show {
+            setPageTitle = {$plugin.tx_c1portfolio_list.settings.show.setPageTitle}
+            pageTitleDivider = {$plugin.tx_c1portfolio_list.settings.show.pageTitleDivider}
+            pageTitlePosition = {$plugin.tx_c1portfolio_list.settings.show.pageTitlePosition}
+            setDescription = {$plugin.tx_c1portfolio_list.settings.show.setDescription}
+        }
     }
     features {
 		skipDefaultArguments = 1

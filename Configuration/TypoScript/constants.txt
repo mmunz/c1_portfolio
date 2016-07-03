@@ -17,5 +17,13 @@ plugin.tx_c1portfolio_list {
             maxItems = 10
             detailPid =
         }
+        show {
+            setPageTitle = 1
+            pageTitleDivider = &nbsp;| &nbsp;
+            # position of the added title. before or after the default page title
+            pageTitlePosition = after
+            # set the description to the portfolios short description.
+            setDescription = 1
+        }
     }
 }

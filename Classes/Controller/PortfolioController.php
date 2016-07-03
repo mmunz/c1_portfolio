@@ -30,6 +30,10 @@ namespace C1\C1Portfolio\Controller;
 /**
  * PortfolioController
  */
+
+
+use C1\C1Portfolio\Utility\MetaTags;
+
 class PortfolioController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
     /**
@@ -57,10 +61,10 @@ class PortfolioController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             $portfolios = $this->portfolioRepository->findAll();
         }
 
-        if (! intval($this->settings['list']['detailPid'] > 0)) {
+        if (!intval($this->settings['list']['detailPid'] > 0)) {
             $this->settings['list']['detailPid'] = $GLOBALS['TSFE']->id;
         }
-        
+
         foreach ($portfolios as $portfolio) {
             $images = $this->portfolioRepository->getFileReferences($portfolio->getUid());
             $portfolio->setMedia($images);
@@ -69,6 +73,7 @@ class PortfolioController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $this->view->assign('portfolios', $portfolios);
     }
 
+
     /**
      * action show
      *
@@ -76,9 +81,17 @@ class PortfolioController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * @return void
      */
     public function showAction(\C1\C1Portfolio\Domain\Model\Portfolio $portfolio) {
+        if ($this->settings['show']['setPageTitle'] === '1') {
+            MetaTags::setPageTitle(
+                $portfolio,
+                $this->settings['show']['pageTitlePosition'],
+                $this->settings['show']['pageTitleDivider']);
+        }
+        if ($this->settings['show']['setDescription'] === '1') {
+            MetaTags::setDescription($portfolio);
+        }
         $this->view->assign('portfolio', $portfolio);
         $images = $this->portfolioRepository->getFileReferences($portfolio->getUid());
         $this->view->assign('images', $images);
     }
-
 }
