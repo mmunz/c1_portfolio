@@ -22,7 +22,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                     file="{portfolio.media.0}"
                     width="400c"
                     height="300"
-                    alt="{f:if(then: portfolio.media.0.propertiesOfFileReference.alternative, else: portfolio.media.0.originalFile.name, condition: condition: portfolio.media.0.propertiesOfFileReference.alternative)}"
+                    alt="{f:if(then: portfolio.media.0.alternative, else: portfolio.media.0.originalFile.name, condition: condition: portfolio.media.0.alternative)}"
                     />
                 <figcaption>
                     <p>{portfolio.date -> f:format.date(format:"Y")}</p>
