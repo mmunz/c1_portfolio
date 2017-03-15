@@ -1,7 +1,7 @@
 {
     "name": "c1/c1-portfolio",
     "type": "typo3-cms-extension",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "A portfolio for web sites.",
     "keywords": [
         "typo3",
