@@ -85,7 +85,6 @@ return array(
 		),
 		'starttime' => array(
 			'exclude' => 1,
-			'l10n_mode' => 'mergeIfNotBlank',
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
 			'config' => array(
 				'type' => 'input',
@@ -101,7 +100,6 @@ return array(
 		),
 		'endtime' => array(
 			'exclude' => 1,
-			'l10n_mode' => 'mergeIfNotBlank',
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
 			'config' => array(
 				'type' => 'input',
